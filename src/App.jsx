@@ -6,9 +6,15 @@ function App() {
 
   switch (gameState) {
     case "start":
-      return <StartScreen start={() => setGameState("play")} />;
+      return (
+        <>
+          <PlayScreen end={() => setGameState("start")} />
+          <StartScreen start={() => setGameState("play")} />
+        </>
+      );
     case "play":
-      return <PlayScreen end={() => setGameState("start")} />;
+      return;
+
     default:
       throw new Error("Invalid game state " + gameState);
   }
