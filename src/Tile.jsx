@@ -3,7 +3,7 @@ export function Tile({ content: Content, flip, state }) {
     case "start":
       return (
         <Back
-          className="inline-block h-16 w-16 bg-indigo-300 p-2 text-center rounded-md"
+          className="inline-block h-16 w-16 bg-indigo-300 p-2 text-center rounded-md cursor:pointer"
           flip={flip}
         />
       );

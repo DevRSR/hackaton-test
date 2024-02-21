@@ -29,7 +29,7 @@ export function StartScreen({ start }) {
         </p>
         <button
           onClick={start}
-          className="bg-pink-500 text-white py-1 px-10 rounded-full mt-12 shadow-inner"
+          className="bg-pink-500 text-white py-1 px-10 rounded-full mt-12 shadow-md shadow-inner hover:bg-pink-600"
         >
           Play
         </button>
@@ -89,6 +89,10 @@ export function PlayScreen({ end }) {
       if (alreadyFlippedTile.content === justFlippedTile.content) {
         confetti({
           ticks: 100,
+          origin: {
+            x: 0.5,
+            y: 0.7
+          }
         });
         newState = "matched";
       }
@@ -123,9 +127,9 @@ export function PlayScreen({ end }) {
     <>
       <div className="flex items-center justify-center w-full h-screen p-10">
         <div className="flex flex-col gap-8 w-full h-full">
-          <div className="flex gap-2 items-center justify-center font-sans">
+          <div className="flex gap-x-2 items-center justify-center font-sans">
             <span className="text-indigo-800">Tries</span>
-            <div className="text-center bg-indigo-200 text-indigo-800 px-2 py- rounded-md">
+            <div className="h-full text-center bg-indigo-200 text-indigo-800 px-2 py-0 rounded-md">
               {tryCount}
             </div>
           </div>
