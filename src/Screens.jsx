@@ -18,8 +18,8 @@ export const possibleTileContents = [
 
 export function StartScreen({ start }) {
   return (
-    <div>
-      <div className="w-full h-full bg-red">
+    <div className="flex items-center justify-center w-full h-screen">
+      <div className="">
         <button onClick={start} className="bg-gray-400 text-white p-3">
           Play
         </button>
