@@ -112,7 +112,7 @@ export function PlayScreen({ end }) {
   return (
     <>
       <div>
-        {getTiles(6).map((tile, i) => (
+        {getTiles(16).map((tile, i) => (
           <Tile key={i} flip={() => flip(i)} {...tile} />
         ))}
       </div>
