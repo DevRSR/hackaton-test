@@ -19,9 +19,11 @@ export const possibleTileContents = [
 export function StartScreen({ start }) {
   return (
     <div>
-      <button onClick={start} className="bg-gray-400 text-white p-3">
-        Play
-      </button>
+      <div className="w-full h-full bg-red">
+        <button onClick={start} className="bg-gray-400 text-white p-3">
+          Play
+        </button>
+      </div>
     </div>
   );
 }
