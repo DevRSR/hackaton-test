@@ -19,17 +19,17 @@ export const possibleTileContents = [
 export function StartScreen({ start }) {
   return (
     <div className="flex items-center justify-center w-full h-screen">
-      <div className="flex flex-col justify-center items-center bg-pink-50 h-2/3 w-80 rounded-md">
-        <h1 className="text-2xl text-center font-bold font-sans text-pink-500 mb-4">
+      <div className="flex flex-col items-center pt-14 bg-pink-50 h-2/3 w-4/5 rounded-md font-sans">
+        <h1 className="text-3xl text-center font-bold text-pink-500 mb-4">
           Memory
         </h1>
 
-        <p className="text-sm text-pink-500 font-sans">
+        <p className="text-sm text-pink-500">
           Flip over tiles looking for pairs
         </p>
         <button
           onClick={start}
-          className="bg-pink-500 text-white py-1 px-10 rounded-full mt-12 shadow-md shadow-inner hover:bg-pink-600"
+          className="bg-pink-500 text-white py-1 px-10 rounded-full mt-8 shadow-md hover:bg-pink-600"
         >
           Play
         </button>
@@ -91,8 +91,8 @@ export function PlayScreen({ end }) {
           ticks: 100,
           origin: {
             x: 0.5,
-            y: 0.7
-          }
+            y: 0.7,
+          },
         });
         newState = "matched";
       }
@@ -125,8 +125,8 @@ export function PlayScreen({ end }) {
 
   return (
     <>
-      <div className="flex items-center justify-center w-full h-screen p-10">
-        <div className="flex flex-col gap-8 w-full h-full">
+      <div className="flex items-center justify-center w-full h-screen ">
+        <div className="flex flex-col gap-8 w-4/5 h-4/5">
           <div className="flex gap-x-2 items-center justify-center font-sans">
             <span className="text-indigo-800">Tries</span>
             <div className="h-full text-center bg-indigo-200 text-indigo-800 px-2 py-0 rounded-md">
